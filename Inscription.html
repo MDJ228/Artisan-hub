@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARTISAN-HUB_Inscription</title>
+</head>
+<link rel="stylesheet" href="Inscription.css">
+<body>
+    <div class="conteneur">
+        <div class="form-box">
+            <h2>Inscription</h2>
+            <form action="Traitement.php" method="post">
+            <!--label du nom-->
+            <label for="Nom">Nom</label>
+            <input type="text" name="Nom" placeholder="Dupont" required><br><br>
+            <!--label du prénom-->
+            <label for="Prenom">Prenom</label>
+            <input type="text" name="Prenom" placeholder="Jean" required><br><br>
+             <!--label de l'e-mail-->
+            <label for="mail">E-mail</label>
+            <input type="email" name="mail" placeholder="user@gmail.com" required><br><br>
+
+            <!--Vérification et confirmation du mot de passe-->
+            <form onsubmit="return verifierMotDePasse()">
+            <label for="password"> Mot de passe</label>
+            <input type="password" Id="password"><br><br>
+            <label for="confirm">Confirmer le mot de passe</label>
+            <input type="password" Id="confirm_password" required><br><br>
+            </form>
+            <!--Choix de métier-->
+            Votre métier <select>
+                <option value="select">Bâtiment & Construction</option>
+                <option>Textile & habillement</option>
+                <option>Alimentation</option>
+                <option>Art & création</option>
+                <option>Réparation & maintenance</option>
+                <option>Travail du bois, du métal & du cuir</option>
+                <option>Services artisanaux</option>
+            </select><br><br>
+            <!--Bouton d'envoie-->
+          <button type="submit">Créer un compte</button>
+            <a href="Connexion.html">J'ai déjà un compte</a>
+        
+            </div>
+    </div>
+    </form>
+    <script src="Password.js"></script>
+</body>
+</html>
