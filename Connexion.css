@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6fafe;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+
+h2 {
+    color: #1f2937;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 6px;
+    user-select: none;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f6fafe;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    margin-bottom: 16px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Label + lien "Mot de passe oublié" sur la même ligne */
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.label-row label {
+    margin-bottom: 0;
+}
+
+.label-row a {
+    font-size: 13px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.label-row a:hover {
+    text-decoration: underline;
+}
+
+/* Champ mot de passe avec icône */
+.input-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    margin-bottom: 0;
+    padding-right: 42px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password:hover {
+    color: #2563eb;
+}
+
+/* Case à cocher */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    margin: 0;
+}
+
+.remember-me label {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 16px;
+}
+
+.register-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Désactiver sélection */
+h2, label, button, .subtitle, .register-link {
+    user-select: none;
+}
+
+/* Responsive */
+.form-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px; /* ← plus large */
+    padding: 48px;    /* ← plus d'espace intérieur */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+
+h2 {
+    color: #1f2937;
+    font-size: 26px;   /* ← plus grand */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 16px;   /* ← plus grand */
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+label {
+    display: block;
+    font-size: 16px;   /* ← plus grand */
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 8px;
+    user-select: none;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px; /* ← plus de padding */
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f6fafe;
+    font-size: 16px;    /* ← plus grand */
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    margin-bottom: 20px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.label-row a {
+    font-size: 15px;   /* ← plus grand */
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 18px;       /* ← plus grand */
+    height: 18px;
+    accent-color: #2563eb;
+    margin: 0;
+}
+
+.remember-me label {
+    margin: 0;
+    font-size: 16px;   /* ← plus grand */
+    color: #6b7280;
+}
+
+button {
+    width: 100%;
+    padding: 14px;     /* ← plus de padding */
+    border-radius: 8px;
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 18px;   /* ← plus grand */
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.register-link {
+    text-align: center;
+    font-size: 15px;   /* ← plus grand */
+    color: #6b7280;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-box {
+        padding: 32px 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARTISAN-HUB_Inscription</title>
+        <link rel="stylesheet" href="Inscription.css">
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <!-- Les fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<link rel="stylesheet" href="Inscription.css">
+
 <body>
-    <div class="conteneur">
+    <div class="container">
         <div class="form-box">
             <h2>Inscription</h2>
-            <form action="Traitement.php" method="post">
+            <form action="Traitement.php" method="post" onsubmit="return verifierMotDePasse()">
             <!--label du nom-->
             <label for="Nom">Nom</label>
             <input type="text" name="Nom" placeholder="Dupont" required><br><br>
@@ -22,12 +26,22 @@
             <input type="email" name="mail" placeholder="user@gmail.com" required><br><br>
 
             <!--Vérification et confirmation du mot de passe-->
-            <form onsubmit="return verifierMotDePasse()">
+           
             <label for="password"> Mot de passe</label>
-            <input type="password" Id="password"><br><br>
+            <div class="input-group">
+            <input type="password" Id="password" placeholder="................" maxlength="16" required><br><br>
+             <span class="toggle-password" onclick="togglePassword('password', this)">
+                <i data-lucide="eye"></i>
+                </span>
+            </div>
+
             <label for="confirm">Confirmer le mot de passe</label>
-            <input type="password" Id="confirm_password" required><br><br>
-            </form>
+            <div class="input-group">
+            <input type="password" Id="confirm_password"  placeholder="................" maxlength="16" required><br><br>
+                <span class="toggle-password" onclick="togglePassword('password', this)">
+                    <i data-lucide="eye"></i>
+                </span>
+           </div>
             <!--Choix de métier-->
             Votre métier <select>
                 <option value="Bâtiment & Construction">Bâtiment & Construction</option>
@@ -38,11 +52,11 @@
                 <option value="Travail du bois, du métal & du cuir">Travail du bois, du métal & du cuir</option>
                 <option value="Services artisanaux" selected>Services artisanaux</option>
             </select><br><br>
-            <!--Bouton d'envoie-->
+            <div class="form-footer"><!--Bouton d'envoie-->
           <button type="submit">Créer un compte</button><br><br>
-            Déjà un compte ? <a href="Connexion.html" target="_blank">Se connecter</a>
-        
+           <p> Déjà un compte ? <a href="Connexion.html" target="_blank">Se connecter</a></p>
             </div>
+         </div>
     </div>
     </form>
     <script src="Password.js"></script>
