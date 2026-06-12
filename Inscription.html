@@ -13,37 +13,45 @@
 <body>
     <div class="container">
         <div class="form-box">
-            <h2>Inscription</h2>
+            <h2>Créer un compte</h2>
+            <p id="subtitle">Choisissez votre type de compte</p>
+              <!-- Choix du type de compte -->
+            <div class="type-choice">
+                <button type="button" class="type-btn active" onclick="switchType('client')">Je suis un client</button>
+                <button type="button" class="type-btn" onclick="switchType('artisan')">Je suis un artisan</button>
+            </div>
             <form action="Traitement.php" method="post" onsubmit="return verifierMotDePasse()">
             <!--label du nom-->
-            <label for="Nom">Nom</label>
-            <input type="text" name="Nom" placeholder="Dupont" required><br><br>
+            <label for="Nom"></label>
+            <input type="text" name="Nom" placeholder="Nom" required><br><br>
             <!--label du prénom-->
-            <label for="Prenom">Prenom</label>
-            <input type="text" name="Prenom" placeholder="Jean" required><br><br>
+            <label for="Prenom"></label>
+            <input type="text" name="Prenom" placeholder="Prenom" required><br><br>
              <!--label de l'e-mail-->
-            <label for="mail">E-mail</label>
-            <input type="email" name="mail" placeholder="user@gmail.com" required><br><br>
+            <label for="mail"></label>
+            <input type="email" name="mail" placeholder="E-mail" required><br><br>
 
             <!--Vérification et confirmation du mot de passe-->
            
-            <label for="password"> Mot de passe</label>
+            <label for="password"></label>
             <div class="input-group">
-            <input type="password" Id="password" placeholder="................" maxlength="16" required><br><br>
+            <input type="password" Id="password" placeholder=" Mot de passe" maxlength="16" required><br><br>
              <span class="toggle-password" onclick="togglePassword('password', this)">
                 <i data-lucide="eye"></i>
                 </span>
             </div>
 
-            <label for="confirm">Confirmer le mot de passe</label>
+            <label for="confirm"></label>
             <div class="input-group">
-            <input type="password" Id="confirm_password"  placeholder="................" maxlength="16" required><br><br>
+            <input type="password" Id="confirm_password"  placeholder="Confirmer le mot de passe" maxlength="16" required><br><br>
                 <span class="toggle-password" onclick="togglePassword('password', this)">
                     <i data-lucide="eye"></i>
                 </span>
            </div>
             <!--Choix de métier-->
-            Votre métier <select>
+             <div id="metier-group" style="display: none;">
+                 <label for="metier">Votre métier</label>
+             <select id="metier" name="metier">
                 <option value="Bâtiment & Construction">Bâtiment & Construction</option>
                 <option value="Textile & habillement">Textile & habillement</option>
                 <option value="Alimentation">Alimentation</option>
@@ -52,9 +60,10 @@
                 <option value="Travail du bois, du métal & du cuir">Travail du bois, du métal & du cuir</option>
                 <option value="Services artisanaux" selected>Services artisanaux</option>
             </select><br><br>
+            </div>
             <div class="form-footer"><!--Bouton d'envoie-->
-          <button type="submit">Créer un compte</button><br><br>
-           <p> Déjà un compte ? <a href="Connexion.html" target="_blank">Se connecter</a></p>
+          <button type="submit">S'inscrire</button><br>
+           <p> Vous avez déjà un compte ? <a href="Connexion.html" target="_blank">Se connecter</a></p>
             </div>
          </div>
     </div>
