@@ -8,7 +8,7 @@ body{
     display: flex;
     margin: 0;
     padding: 16px;
-    background-color: #f6fafe;
+    background-color: #ffffff;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
@@ -19,8 +19,8 @@ body{
 
 .form-box{
     background-color: #ffffff;
-    width: 900px;
-    max-width: 420px;
+    width: 100%;
+    max-width: 900px;
     padding: 32px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
@@ -165,7 +165,7 @@ label:focus{
 }
 input::placeholder{
     color: #666;
-    font-style: italic;
+    font-style: bold;
 }
 
 .input-group{
@@ -248,4 +248,19 @@ margin: 0;
     background-color: #2563eb;
     border-color: #2563eb;
     color: #ffffff;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    object-fit:contain;
+    mix-blend-mode: multiply;
+    padding: 5px;
+    margin-top: 2px;
 }

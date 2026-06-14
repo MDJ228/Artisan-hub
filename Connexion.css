@@ -194,13 +194,15 @@ h2, label, button, .subtitle, .register-link {
 }
 
 /* Responsive */
-.form-box {
-    background-color: #ffffff;
+.box-form {
+   background-color: #ffffff;
     width: 100%;
-    max-width: 500px; /* ← plus large */
-    padding: 48px;    /* ← plus d'espace intérieur */
+    max-width: 900px;
+    padding: 32px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+    box-sizing: border-box;
+
 }
 
 h2 {
@@ -318,4 +320,19 @@ button:hover {
         font-size: 16px;
         padding: 12px;
     }
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+    object-fit:contain;
+    mix-blend-mode: multiply;
+    padding: 5px;
+    margin-top: 2px;
 }
