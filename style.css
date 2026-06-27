@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Style pour le header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 100px;
+}
+
+/* Barre de navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: blue;
+}
+
+/* Boutons */
+.btn-login button {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: blue;
+}
+
+.login {
+    background-color: #fff;
+    color: white;
+    border: 1px solid blue;
+}
+
+.login a{
+    color: white;
+    text-decoration: none;
+}
+
+.register {
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+}
+
+.register a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn-login .login:hover {
+    background-color: darkblue;
+    color: darkblue;
+}
+
+.btn-login .register:hover {
+    background-color: darkblue;
+    border-color: darkblue;
+}
+
+/* Section Accueil principal */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    gap: 50px;
+}
+
+.home .content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.home .content h1 {
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.home .content .description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.search-bar i {
+    color: #999;
+}
+
+.search-bar input {
+    flex: 1;
+    min-width: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Image à droite */
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 10px; /* corrigé : "Border-radius" avec majuscule était invalide */
+}
+
+/* Bloc des statistiques sous la recherche */
+.statistics {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.stat {
+    text-align: left;
+}
+
+.stat h2 {
+    font-size: 24px;
+    color: blue;
+    font-weight: bold;
+}
+
+.stat p {
+    color: #777;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px 80px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #777;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: blue;
+}
+
+.contact-info {
+    margin-top: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.legal {
+    margin-top: 10px;
+}
+
+.legal a {
+    color: #777;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.legal a:hover {
+    color: blue;
+}
+
+.newsletter {
+    margin-top: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    width: 200px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
