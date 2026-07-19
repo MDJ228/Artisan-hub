@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+body{
+    user-select: none;
+}
+
 /* Style pour le header */
 header {
     display: flex;
@@ -27,6 +31,9 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -37,14 +44,30 @@ nav ul li a {
     color: black;
     text-decoration: none;
     font-size: 18px;
+    position: relative; 
+    padding-bottom: 4px; 
     transition: color 0.3s;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: blue; 
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
     color: blue;
 }
 
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%; }
 /* Boutons */
 .btn-login button {
     border-radius: 5px;
@@ -127,6 +150,9 @@ nav ul li a:hover {
     color: #999;
 }
 
+.search:hover{
+    background-color: darkblue;
+}
 .search-bar input {
     flex: 1;
     min-width: 150px;
@@ -252,4 +278,134 @@ footer {
     cursor: pointer;
     font-size: 16px;
     margin-left: 10px;
+}
+
+.subscription:hover{
+background-color: darkblue;
+}
+
+
+
+/* Tablette */
+@media (max-width: 900px) {
+    header {
+        padding: 16px 30px;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    .btn-login button {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .home .content h1 {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 20px 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 16px 20px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    /* Désactiver ::after sur mobile */
+    nav ul li a::after {
+        display: none;
+    }
+
+    .btn-login {
+        display: flex;
+        width: 100%;
+    }
+
+    .btn-login button {
+        flex: 1;
+        margin-left: 0;
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
+    .btn-login button:last-child {
+        margin-right: 0;
+    }
+
+    /* Home en colonne */
+    .home {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .home .content {
+        max-width: 100%;
+    }
+
+    .home .content h1 {
+        font-size: 28px;
+    }
+
+    .home .content .description {
+        font-size: 15px;
+    }
+
+    /* Image en premier sur mobile */
+    .image {
+        order: -1;
+    }
+
+    .image img {
+        max-width: 100%;
+    }
+
+    /* Statistiques en 2x2 */
+    .statistics {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .social-media a {
+        font-size: 15px;
+        margin: 0 6px;
+    }
+
+    .newsletter input {
+        width: 100%;
+    }
+
+    .newsletter button {
+        width: 100%;
+    }
 }

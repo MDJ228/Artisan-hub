@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard_Client — ArtisanHub</title>
+    <link rel="icon" href="logo1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- ── HEADER ── -->
+    <header class="dash-header">
+        <div class="dash-logo">
+            <img src="logo.jpeg" alt="logo artisan_hub">
+        </div>
+        <div class="dash-header-right">
+            <button class="notif-btn" aria-label="Notifications">
+                <i class="fa-regular fa-bell"></i>
+                <span class="notif-badge"></span>
+            </button>
+            <div class="avatar" title="Kossi ADJOGUENU">KA</div>
+        </div>
+    </header>
+
+    <!-- ── ONGLETS ── -->
+    <nav class="dash-tabs">
+        <button class="dash-tab active">
+            <i class="fa-solid fa-table-cells-large"></i> Vue d'ensemble
+        </button>
+        <button class="dash-tab">
+            <i class="fa-regular fa-calendar"></i> Réservations
+        </button>
+        <button class="dash-tab">
+            <i class="fa-regular fa-heart"></i> Favoris
+        </button>
+        <button class="dash-tab">
+            <i class="fa-solid fa-receipt"></i> Paiements
+        </button>
+        <button class="dash-tab">
+            <i class="fa-regular fa-user"></i> Profil
+        </button>
+    </nav>
+
+    <!-- ── CONTENU PRINCIPAL ── -->
+    <main class="dash-body">
+
+        <!-- Bandeau de bienvenue -->
+        <div class="welcome">
+            <div class="welcome-text">
+                <h2>Bonjour, Kossi 👋</h2>
+                <p>Vous avez 2 réservations en cours et 3 nouvelles notifications.</p>
+            </div>
+            <button class="welcome-btn">Trouver un artisan</button>
+        </div>
+
+        <!-- Cartes statistiques -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="label">
+                    <i class="fa-regular fa-calendar"></i> Réservations
+                </div>
+                <div class="value">6</div>
+                <div class="sub">dont 2 en cours</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">
+                    <i class="fa-regular fa-heart"></i> Artisans favoris
+                </div>
+                <div class="value">4</div>
+                <div class="sub">enregistrés</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">
+                    <i class="fa-regular fa-credit-card"></i> Total dépensé
+                </div>
+                <div class="value">87 500</div>
+                <div class="sub">FCFA ce mois</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">
+                    <i class="fa-regular fa-star"></i> Avis donnés
+                </div>
+                <div class="value">3</div>
+                <span class="badge-ok">
+                    <i class="fa-solid fa-check"></i> Merci !
+                </span>
+            </div>
+        </div>
+
+        <!-- Réservations récentes -->
+        <div class="section-title">
+            Mes réservations récentes
+            <a href="#">Voir tout →</a>
+        </div>
+        <div class="resa-list">
+            <div class="resa-card">
+                <div class="resa-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div class="resa-info">
+                    <div class="name">Électricité — Amavi Kodjo</div>
+                    <div class="meta">
+                        <i class="fa-regular fa-calendar"></i> 30 juin 2026 · 09h00
+                    </div>
+                </div>
+                <div class="resa-right">
+                    <span class="pill pill-pending">En attente</span>
+                    <span class="resa-price">15 000 FCFA</span>
+                </div>
+            </div>
+
+            <div class="resa-card">
+                <div class="resa-icon">
+                    <i class="fa-solid fa-paint-roller"></i>
+                </div>
+                <div class="resa-info">
+                    <div class="name">Peinture — Afi Degli</div>
+                    <div class="meta">
+                        <i class="fa-regular fa-calendar"></i> 2 juil. 2026 · 14h00
+                    </div>
+                </div>
+                <div class="resa-right">
+                    <span class="pill pill-ok">Confirmée</span>
+                    <span class="resa-price">32 000 FCFA</span>
+                </div>
+            </div>
+
+            <div class="resa-card">
+                <div class="resa-icon">
+                    <i class="fa-solid fa-faucet"></i>
+                </div>
+                <div class="resa-info">
+                    <div class="name">Plomberie — Yao Akakpo</div>
+                    <div class="meta">
+                        <i class="fa-regular fa-calendar"></i> 20 juin 2026
+                    </div>
+                </div>
+                <div class="resa-right">
+                    <span class="pill pill-done">Terminée</span>
+                    <span class="resa-price">40 500 FCFA</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deux colonnes : Favoris + Notifications -->
+        <div class="two-col">
+
+            <!-- Artisans favoris -->
+            <div>
+                <div class="section-title">
+                    Artisans favoris
+                    <a href="#">Voir tout →</a>
+                </div>
+                <div class="fav-list">
+                    <div class="fav-card">
+                        <div class="fav-avatar">YA</div>
+                        <div class="fav-info">
+                            <div class="fname">Yao Akakpo</div>
+                            <div class="fmeta">Plombier · Lomé</div>
+                            <div class="fav-stars">★★★★★</div>
+                        </div>
+                        <button class="fav-btn">Réserver</button>
+                    </div>
+                    <div class="fav-card">
+                        <div class="fav-avatar">AD</div>
+                        <div class="fav-info">
+                            <div class="fname">Afi Degli</div>
+                            <div class="fmeta">Peintre · Lomé</div>
+                            <div class="fav-stars">★★★★☆</div>
+                        </div>
+                        <button class="fav-btn">Réserver</button>
+                    </div>
+                    <div class="fav-card">
+                        <div class="fav-avatar">KA</div>
+                        <div class="fav-info">
+                            <div class="fname">Kofi Adzoa</div>
+                            <div class="fmeta">Menuisier · Kpalimé</div>
+                            <div class="fav-stars">★★★★★</div>
+                        </div>
+                        <button class="fav-btn">Réserver</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div>
+                <div class="section-title">Notifications</div>
+                <div class="notif-list">
+                    <div class="notif-item unread">
+                        <div class="notif-dot"></div>
+                        <div>
+                            <div class="notif-text">Afi Degli a confirmé votre réservation du 2 juillet.</div>
+                            <div class="notif-time">Il y a 30 min</div>
+                        </div>
+                    </div>
+                    <div class="notif-item unread">
+                        <div class="notif-dot"></div>
+                        <div>
+                            <div class="notif-text">Votre paiement de 40 500 FCFA a bien été reçu.</div>
+                            <div class="notif-time">Il y a 2h</div>
+                        </div>
+                    </div>
+                    <div class="notif-item">
+                        <div class="notif-dot read"></div>
+                        <div>
+                            <div class="notif-text">Amavi Kodjo a accepté votre demande.</div>
+                            <div class="notif-time">Hier · 17h12</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Historique des paiements -->
+        <div class="section-title">
+            Historique des paiements
+            <a href="#">Voir tout →</a>
+        </div>
+        <div class="hist-wrapper">
+            <table class="hist-table">
+                <thead>
+                    <tr>
+                        <th>Artisan</th>
+                        <th>Service</th>
+                        <th>Date</th>
+                        <th>Montant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yao Akakpo</td>
+                        <td>Plomberie</td>
+                        <td>20 juin 2026</td>
+                        <td class="amount-ok">40 500 FCFA</td>
+                    </tr>
+                    <tr>
+                        <td>Kofi Adzoa</td>
+                        <td>Menuiserie</td>
+                        <td>10 juin 2026</td>
+                        <td class="amount-ok">25 000 FCFA</td>
+                    </tr>
+                    <tr>
+                        <td>Afi Degli</td>
+                        <td>Peinture</td>
+                        <td>1 juin 2026</td>
+                        <td class="amount-ok">22 000 FCFA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+</html>
